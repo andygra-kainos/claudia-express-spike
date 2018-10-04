@@ -1,9 +1,15 @@
 {
   "name": "claudia-express-spike",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "claudia:install": "npm install --save-dev claudia",
+    "claudia:generate": "./node_modules/.bin/claudia generate-serverless-express-proxy --express-module app",
+    "claudia:create": "./node_modules/.bin/claudia create --profile claudia --handler lambda.handler --deploy-proxy-api --region eu-west-1",
+    "claudia:pack": "./node_modules/.bin/claudia update --profile claudia",
+    "claudia:test": "./node_modules/.bin/claudia test-lambda --profile claudia",
+    "claudia:update": "./node_modules/.bin/claudia update --profile claudia"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
