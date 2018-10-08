@@ -1,7 +1,13 @@
 {
   "name": "claudia-express-spike",
+  "description": "Example of a vanilla Express app wrapped for serverless deployment to AWS lambda",
+  "author": "Andy Gray <https://github.com/andygra-kainos>",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:andygra-kainos/claudia-express-spike.git"
+  },
   "scripts": {
     "start": "node ./bin/www",
     "claudia:install": "npm install --save-dev claudia",
